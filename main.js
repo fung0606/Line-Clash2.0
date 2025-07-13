@@ -11,6 +11,7 @@ let isAiming = false;
 let aimStart = null;
 let aimEnd = null;
 let roundNumber = 1;
+let waitingForChoice = false;
 
 function updateTurnIndicator() {
   const color = players[currentPlayer].color;
