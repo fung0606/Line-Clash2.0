@@ -4,12 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Line Clash</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Line Clash</h1>
+  <div id="status">
+    <p id="turnIndicator">現在輪到：紅色玩家</p>
+    <p id="roundIndicator">回合：第 1 回合</p>
+  </div>
+
   <canvas id="gameCanvas" width="1200" height="600"></canvas>
-  <p id="turnIndicator">現在輪到：紅色玩家</p>
+
+  <p id="distanceIndicator">射擊距離：0 px</p>
 
   <div id="choicePanel" style="display:none;">
     <p>請選擇下一回合的起點：</p>
@@ -17,14 +23,11 @@
     <button onclick="chooseNextStart('start')">使用起點</button>
   </div>
 
-  <div id="winOverlay">
-    <div id="winPanel">
-      <p id="winText"></p>
-      <button id="restartBtn">重新開始</button>
-    </div>
+  <div id="winPanel">
+    <p id="winText"></p>
+    <button onclick="resetGame()">重新開始</button>
   </div>
 
-  <script src="script.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

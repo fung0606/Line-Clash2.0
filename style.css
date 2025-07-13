@@ -1,38 +1,64 @@
 body {
+  margin: 0;
   font-family: sans-serif;
   text-align: center;
-  margin: 20px;
+  background: linear-gradient(#d2e1f0, #ffffff);
 }
 
-canvas {
-  border: 1px solid black;
-  cursor: crosshair;
-  background-color: white;
+h1 {
+  margin-top: 20px;
+}
+
+#status {
+  margin-top: 5px;
 }
 
 #turnIndicator {
   font-size: 24px;
-  margin-top: 10px;
+  margin: 5px 0;
 }
 
-/* 勝利畫面 */
-#winOverlay {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+#roundIndicator {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+canvas {
+  margin-top: 10px;
+  border: 2px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  background-color: #fafafa;
+}
+
+#distanceIndicator {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+#choicePanel {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+#choicePanel button {
+  font-size: 18px;
+  padding: 8px 16px;
+  margin: 5px;
 }
 
 #winPanel {
-  background-color: white;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 3px solid #333;
   padding: 30px 40px;
   border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  z-index: 1000;
 }
 
 #winText {
@@ -41,23 +67,12 @@ canvas {
   margin-bottom: 20px;
 }
 
-#restartBtn {
-  padding: 8px 20px;
+#winPanel button {
   font-size: 16px;
-  border: none;
+  padding: 8px 20px;
   background-color: #007bff;
   color: white;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-
-#choicePanel {
-  margin-top: 10px;
-  font-size: 20px;
-}
-
-#choicePanel button {
-  font-size: 18px;
-  padding: 8px 16px;
-  margin: 0 5px;
 }
